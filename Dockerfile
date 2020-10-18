@@ -20,8 +20,10 @@ RUN apt-get -yqq install gnupg;	\
 WORKDIR /app
 COPY . .
 
-RUN npm --prefix ./www install ./www
 RUN wasm-pack build
+
+RUN npm --prefix www install www
+
 EXPOSE 8080
 CMD [ "npm", "--prefix", "www", "start" ]
 #RUN cd www && npm start

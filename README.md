@@ -1,7 +1,7 @@
 Para compilar esto:
 
 cargo build
-wasp-pack build
+wasm-pack build
 
 Para correr:
 
